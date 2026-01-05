@@ -4,6 +4,26 @@
 @use "@coreui/chartjs/scss/coreui-chartjs";
 @use "vendors/simplebar";
 
+:root {
+  --background-color: #f1f5f4;
+  --default-color: #212529;
+  --heading-color: #2d465e;
+  --accent-color: #d8b740;
+  --surface-color: #ffffff;
+  --contrast-color: #ffffff;
+
+  /* Bootstrap / CoreUI overrides */
+  --cui-primary: #d8b740;
+  --cui-primary-rgb: 216, 183, 64;
+
+  --bs-primary: #d8b740;
+  --bs-primary-rgb: 216, 183, 64;
+
+  --bs-body-bg: var(--background-color);
+  --bs-body-color: var(--default-color);
+}
+
+
 body {
   background-color: var(--cui-tertiary-bg);
 }
@@ -64,4 +84,37 @@ body {
   .footer {
     --cui-footer-bg: var(--cui-body-bg);
   }
+}
+
+.btn-primary {
+  background-color: #d8b740;
+  border-color: #d8b740;
+}
+.btn-primary:hover {
+  background-color: #c9ab3e;
+  border-color: #c9ab3e;
+}
+.btn-primary:focus, .btn-primary.focus {
+  box-shadow: 0 0 0 0.25rem rgba(#d8b740, 0.5);
+}
+.btn-primary:disabled, .btn-primary.disabled {
+  background-color: #d8b740;
+  border-color: #d8b740;
+}
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active,
+.show > .btn-primary.dropdown-toggle {
+  background-color: #c9ab3e;
+  border-color: #c9ab3e;
+}
+.btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-primary.dropdown-toggle:focus {
+  box-shadow: 0 0 0 0.25rem rgba(#d8b740, 0.5);
+}
+
+.btn-danger{
+  color: #f1f5f4;
+}
+
+.btn-danger:hover {
+ color: #f1f5f4;
 }

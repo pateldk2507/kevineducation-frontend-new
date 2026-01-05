@@ -268,7 +268,7 @@ export default function AddStudent() {
                         classNames="fade-slide"
                       >
                         <CRow className="mb-2 align-items-center">
-                          <CCol md={3}>
+                          <CCol md={3} className='mb-3'>
                             <CFormInput
                               name="name"
                               placeholder="Name"
@@ -283,7 +283,7 @@ export default function AddStudent() {
                               </CAlert>
                             )}
                           </CCol>
-                          <CCol md={3}>
+                          <CCol md={3} className='mb-3'>
                             <CFormInput
                               name="phone"
                               placeholder="Phone"
@@ -298,7 +298,7 @@ export default function AddStudent() {
                               </CAlert>
                             )}
                           </CCol>
-                          <CCol md={3}>
+                          <CCol md={3} className='mb-3'>
                             <CFormInput
                               name="relation"
                               placeholder="Relation"
@@ -313,7 +313,7 @@ export default function AddStudent() {
                               </CAlert>
                             )}
                           </CCol>
-                          <CCol md={3}>
+                          <CCol md={3} className='mb-3'>
                             <CButton
                               color="danger"
                               onClick={() => removeRow('emergencyContacts', i)}

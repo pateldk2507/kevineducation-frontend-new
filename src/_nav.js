@@ -4,11 +4,26 @@ import {
   cilNotes,
   cilSpeedometer,
   cilMoney,
+  cibMyspace,
+  cibReadme,
+  cilHouse,
+  cilDescription,
+  cilBullhorn,
+  cibAdobeAcrobatReader,
+  cilCalculator,
+  cilChatBubble,
+  cibPinboard,
+  cilLibrary,
+  cilTags,
+  cilChart,
+  cilLibraryBuilding,
+  cilCommentBubble,
   cilBook,
   cibGooglesCholar,
   cilWc,
   cilBuilding,
   cibOpsgenie,
+  cilPin,
 } from '@coreui/icons'
 import { CNavGroup, CNavItem, CNavTitle } from '@coreui/react'
 
@@ -41,7 +56,7 @@ const _nav = [
   },
   {
     component: CNavGroup,
-    name: 'Student',
+    name: 'Students',
     to: '/student',
     icon: <CIcon icon={cibGooglesCholar} customClassName="nav-icon" />,
     items: [
@@ -59,7 +74,7 @@ const _nav = [
   },
   {
     component: CNavGroup,
-    name: 'Teacher',
+    name: 'Teachers',
     to: '/teacher',
     icon: <CIcon icon={cibOpsgenie} customClassName="nav-icon" />,
     items: [
@@ -80,7 +95,7 @@ const _nav = [
 
   {
     component: CNavGroup,
-    name: 'Parent',
+    name: 'Parents',
     icon: <CIcon icon={cilWc} customClassName="nav-icon" />,
     items: [
       {
@@ -98,24 +113,62 @@ const _nav = [
     ],
   },
   {
+    component : CNavTitle,
+    name : 'Academic'
+  },
+  {
     component: CNavGroup,
-    name: 'Class',
-    icon: <CIcon icon={cilBuilding} customClassName="nav-icon" />,
+    name: 'Department',
+    icon: <CIcon icon={cilTags} customClassName="nav-icon" />,
+    items: [
+        {
+          component: CNavItem,
+          name: 'Add Department',
+          to: '/department/add',
+        },
+        {
+          component: CNavItem,
+          name: 'Department List',
+          to: '/department/list',
+        },
+      ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Course',
+    icon: <CIcon icon={cilNotes} customClassName="nav-icon" />,
+    items: [
+        {
+          component: CNavItem,
+          name: 'Add Course',
+          to: '/Course/add',
+        },
+        {
+          component: CNavItem,
+          name: 'Course List',
+          to: '/Course/list',
+        },
+      ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Class/Branch',
+    icon: <CIcon icon={cilLibraryBuilding} customClassName="nav-icon" />,
+    // icon : <CIcon className='bi bi-person' customClassName="nav-icon" />,
    items: [
       {
         component: CNavItem,
-        name: 'Add Class',
-
+        name: 'Add Class/Branch',
         to: '/class/add',
       },
       {
         component: CNavItem,
-        name: 'Class List',
+        name: 'Class/Branch List',
         to: '/class/list',
       },
     ],
   },
-   {
+  {
     component: CNavGroup,
     name: 'Subject',
     icon: <CIcon icon={cilBook} customClassName="nav-icon" />,
@@ -134,24 +187,183 @@ const _nav = [
     ],
   },
   {
+    component: CNavGroup,
+    name: 'Batches',
+    icon: <CIcon icon={cibMyspace} customClassName="nav-icon" />,
+    items: [
+        {
+          component: CNavItem,
+          name: 'Add Batches',
+          to: '/Batches/add',
+        },
+        {
+          component: CNavItem,
+          name: 'Batches List',
+          to: '/Batches/list',
+        },
+      ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Test/Exam',
+    icon: <CIcon icon={cibReadme} customClassName="nav-icon" />,
+    items: [
+        {
+          component: CNavItem,
+          name: 'Add Test/Exam',
+          to: '/exam/add',
+        },
+        {
+          component: CNavItem,
+          name: 'Test-Exam List',
+          to: '/exam/list',
+        },
+      ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Homework',
+    icon: <CIcon icon={cilHouse} customClassName="nav-icon" />,
+    items: [
+        {
+          component: CNavItem,
+          name: 'Add Homework',
+          to: '/Homework/add',
+        },
+        {
+          component: CNavItem,
+          name: 'Homework List',
+          to: '/Homework/list',
+        },
+      ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Seminars',
+    icon: <CIcon icon={cilCommentBubble} customClassName="nav-icon" />,
+    items: [
+        {
+          component: CNavItem,
+          name: 'Add Seminars',
+          to: '/Seminars/add',
+        },
+        {
+          component: CNavItem,
+          name: 'Seminars List',
+          to: '/Seminars/list',
+        },
+      ],
+  },
+   
+  {
     component: CNavTitle,
-    name: 'Financials',
+    name: 'Miscellaneous',
   },
    {
     component: CNavGroup,
-    name: 'Fees',
-    icon: <CIcon icon={cilMoney} customClassName="nav-icon" />,
+    name: 'Performance',
+    icon: <CIcon icon={cilChart} customClassName="nav-icon" />,
     // icon : <CIcon className='bi bi-person' customClassName="nav-icon" />,
    items: [
       {
         component: CNavItem,
-        name: 'Add Fees',
-        to: '/fees/add',
+        name: 'Add Performance',
+        to: '/Performance/add',
       },
       {
         component: CNavItem,
-        name: 'Fees List',
-        to: '/fees/list',
+        name: 'Performance List',
+        to: '/Performance/list',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Notice',
+    icon: <CIcon icon={cilBullhorn} customClassName="nav-icon" />,
+    // icon : <CIcon className='bi bi-person' customClassName="nav-icon" />,
+   items: [
+      {
+        component: CNavItem,
+        name: 'Add Notice',
+        to: '/Notice/add',
+      },
+      {
+        component: CNavItem,
+        name: 'Notice List',
+        to: '/Notice/list',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Activity',
+    icon: <CIcon icon={cilCalculator} customClassName="nav-icon" />,
+    // icon : <CIcon className='bi bi-person' customClassName="nav-icon" />,
+   items: [
+      {
+        component: CNavItem,
+        name: 'Add Activity',
+        to: '/Activity/add',
+      },
+      {
+        component: CNavItem,
+        name: 'Activity List',
+        to: '/Activity/list',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Material',
+    icon: <CIcon icon={cilLibrary} customClassName="nav-icon" />,
+    // icon : <CIcon className='bi bi-person' customClassName="nav-icon" />,
+   items: [
+      {
+        component: CNavItem,
+        name: 'Add Material',
+        to: '/Material/add',
+      },
+      {
+        component: CNavItem,
+        name: 'Material List',
+        to: '/Material/list',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Projects/Tasks',
+    icon: <CIcon icon={cilPin} customClassName="nav-icon" />,
+    // icon : <CIcon className='bi bi-person' customClassName="nav-icon" />,
+   items: [
+      {
+        component: CNavItem,
+        name: 'Add Projects/Tasks',
+        to: '/Projects/add',
+      },
+      {
+        component: CNavItem,
+        name: 'Projects/Tasks List',
+        to: '/Projects/list',
+      },
+    ],
+  },
+  {
+    component: CNavGroup,
+    name: 'Google Review',
+    icon: <CIcon icon={cilChatBubble} customClassName="nav-icon" />,
+    // icon : <CIcon className='bi bi-person' customClassName="nav-icon" />,
+   items: [
+      {
+        component: CNavItem,
+        name: 'Add Google Review',
+        to: '/review/add',
+      },
+      {
+        component: CNavItem,
+        name: 'Google Review List',
+        to: '/review/list',
       },
     ],
   },

@@ -50,7 +50,7 @@ const WidgetsDropdown = (props) => {
               </span>
             </>
           }
-          title="Users"
+          title="Total Students"
           action={
             <CDropdown alignment="end">
               <CDropdownToggle color="transparent" caret={false} className="text-white p-0">
@@ -134,7 +134,7 @@ const WidgetsDropdown = (props) => {
           color="info"
           value={
             <>
-              $6.200{' '}
+              ₹62K{' '}
               <span className="fs-6 fw-normal">
                 (40.9% <CIcon icon={cilArrowTop} />)
               </span>
@@ -295,13 +295,13 @@ const WidgetsDropdown = (props) => {
           color="danger"
           value={
             <>
-              44K{' '}
+              4K{' '}
               <span className="fs-6 fw-normal">
                 (-23.6% <CIcon icon={cilArrowBottom} />)
               </span>
             </>
           }
-          title="Sessions"
+          title="Total Online Student"
           action={
             <CDropdown alignment="end">
               <CDropdownToggle color="transparent" caret={false} className="text-white p-0">
